@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+
+<head>
+  <meta charset = 'utf-8'>
+  <title>Netflix Clone</title>
+  <link rel="stylesheet" href="./styles/man.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Default style for placeholder text */
+    /* Default style for input field and placeholder text */
+    .smol {
+      position: relative; /* Ensure relative positioning for absolute positioning of placeholder */
+      border: 1px solid #848484; /* Example border style */
+      padding: 15px; /* Example padding */
+    }
+
+    /* Placeholder text style */
+    .smol::placeholder {
+      font-size: 14px; /* Adjust the font size as needed */
+      opacity: 1; /* Ensure placeholder text is fully visible */
+      position: absolute; /* Position the placeholder absolutely */
+      left: 20px; /* Adjust horizontal positioning */
+      top: 50%; /* Move placeholder up by 50% of input height */
+      transform: translateY(-50%); /* Center vertically */
+      transition: all 0.3s ease; /* Example transition for smooth animation */
+    }
+
+    /* Style for input field when focused */
+    .smol:focus {
+      padding-top: 10px; /* Example decrease in padding */
+      padding-bottom: 5px; /* Example decrease in padding */
+    }
+
+    /* Style for placeholder text when input is focused */
+    .smol:focus::placeholder {
+      font-size: 12px; /* Adjust the font size when input is focused */
+      top: 30%; /* Adjust the top position to move placeholder upwards */
+    }
+  </style>
+</head>
+
+<body>
+
+  <!--Sabse Upar-->
+  <section class="w-[100%] h-[100vh] bg-[url('./Background.png')] bg-center bg-cover">
+    <!-- Overlay section -->
+    <div class="w-[100%] h-[100vh] bg-[rgba(0,0,0,0.5)]"> <!--rgba(0,0,0) is color black, and 0.5 is its transparency-->
+    <!-- Header -->
+      <header class="max-w-[1170px] mx-auto pt-[20px]"> <!--Meaning maximum width is 1170, and mx-auto meaning x direction main margin auto (mid) rakho--> 
+      <!-- Logo part using grids -->
+        <div class="grid sm:grid-col-2 grid-cols-[30%_auto] px-[10px] items-center">   <!--Meaning the grid has 2 columns FOR A MINIMUM SIZE OF 640px; AND make the First column=30% (meaning figure) of the grid length, and rest 70% is of div column-->
+          <figure>
+            <!-- logo -->
+            <img src="./images/Netflix.png" class="w-[148px]" alt="">
+          </figure>
+          <!-- The other stuff -->
+          <div class="flex justify-end gap-[20px] text-white">
+            <!-- Drop down menu -->
+            <div class="relative">
+              <svg class="text-[white] absolute top-[10px] left-[9px]" xmlns="http://www.w3.org/2000/svg" fill="none" width="16" height="16" viewBox="0 0 16 16" role="img" data-icon="LanguagesSmall" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.7668 5.33333L10.5038 5.99715L9.33974 8.9355L8.76866 10.377L7.33333 14H9.10751L9.83505 12.0326H13.4217L14.162 14H16L12.5665 5.33333H10.8278H10.7668ZM10.6186 9.93479L10.3839 10.5632H11.1036H12.8856L11.6348 7.2136L10.6186 9.93479ZM9.52722 4.84224C9.55393 4.77481 9.58574 4.71045 9.62211 4.64954H6.41909V2H4.926V4.64954H0.540802V5.99715H4.31466C3.35062 7.79015 1.75173 9.51463 0 10.4283C0.329184 10.7138 0.811203 11.2391 1.04633 11.5931C2.55118 10.6795 3.90318 9.22912 4.926 7.57316V12.6667H6.41909V7.51606C6.81951 8.15256 7.26748 8.76169 7.7521 9.32292L8.31996 7.88955C7.80191 7.29052 7.34631 6.64699 6.9834 5.99715H9.06968L9.52722 4.84224Z" fill="currentColor"></path></svg> 
+              <select name="" id="" class="bg-black border-[1px] border-white sm:p-[5px_25px] p-[5px_20px] rounded-[5px]">  <!--Meaning for top-buttom, padding is 5px, and for left-right, padding is 25px, and then for pixels smaller than 640 px, let it be 5px_20px-->
+                <option value="">English</option>
+                <option value="">Hindi</option>
+              </select> 
+            </div>
+            <button class="bg-[red] rounded-[5px] px-[10px]">Sign in</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="max-w-[1170px] mx-auto sm:py-[150px] py-[50px] text-[white] text-center">
+        <h1 class="sm:text-[50px] text-[30px] font-bold">
+          Unlimited movies, TV shows and more
+        </h1>
+        <h4 class="text-[27px] py-[10px]">
+          Watch anywhere. Cancel anytime.
+        </h4>
+        <h4 class="text-[22px] py-[10px]">
+          Ready to watch? Enter your email to create or restart your membership.
+        </h4>
+
+        <!-- Input -->
+        <div class="max-w-[700px] mx-auto pt-[10px] sm:px-[10px] px-[40px] ">
+          <form action="" class="grid sm:grid-cols-[70%_auto] gap-[10px] grid-cols-1 text-center"> <!--Meaning if screen is smaller than 640ox, then there is going to be only 1 column-->
+            <input type="text" class= "border-[#848484] border-[1px] h-[50px] bg-[transparent] pl-[20px] rounded-[5px] smol" placeholder="Email Address">
+            <button class="text-[white] bg-red-600 font-bold text-[22px] rounded-[5px] sm:max-w-[300px] max-w-[200px] py-[5px] mx-auto px-[20px] hover:bg-[rgba(193,17,25)] duration-300 flex justify-between items-center">
+              <p>Get Started</p>
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="24" height="24" viewBox="0 0 24 24" role="img" data-icon="ChevronRightStandard" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z" fill="currentColor"></path></svg>
+              </div>
+            </button>
+          </form>
+        </div>
+
+      </div>
+  </div>
+  
+  
+    </section>
+
+  <!--Enjoy Your TV-->
+  <section class="w-[100%] bg-[black] border-t-[8px] border-t-[#b8b8b8] sm:py-[50px] py-[50px]">
+    <div class="max-w-[1170px] mx-auto px-[14px] ">
+      <div class="grid sm:grid-cols-2 grid-cols-1 items-center">
+        <div>
+          <h2 class="sm:text-[50px] text-[40px] font-bold text-[white]">Enjoy on your TV</h2>
+          <p class="text-white sm:text-[25px] text-[20px] pt-[10px]">Watch on smart TVs, PlayStation, Xbox, Chromecast, <br> Apple TV, Blu-ray players and more.</p>
+        </div>
+
+        <figure class="relative">  <!--By applying the relative class to the <figure> tag, it sets the positioning context for any absolutely positioned children within it. This means that any elements with position: absolute; inside this <figure> tag will be positioned relative to the <figure> element, rather than the entire document or another positioned ancestor.-->
+          <video class="absolute w-[80%] bottom-[20%] left-[10%] z-[1]">  <!--Absolute (taki zyada akad dikhake alag na rahe). The percentage part was beautiful if you remember-->
+            <source src="./images/video-tv-in-0819.m4v">
+          </video>
+          <img class="relative z-[2]" alt="" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" data-uia="nmhp-card-animation-asset-image" class="default-ltr-cache-1d3w5wq">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!--Download your Shows Offline-->
+  <section class="w-[100%] bg-[black] border-t-[8px] border-t-[#b8b8b8] sm:py-[50px] py-[50px]">
+    <div class="max-w-[1170px] mx-auto px-[14px] ">
+      <div class="grid sm:grid-cols-2 grid-cols-1 items-center"> <!--Biggest grid 1-->
+        
+        <figure class="relative sm:order-[1] order-[2]">  <!--By applying the relative class to the <figure> tag, it sets the positioning context for any absolutely positioned children within it. This means that any elements with position: absolute; inside this <figure> tag will be positioned relative to the <figure> element, rather than the entire document or another positioned ancestor.-->
+          <img alt="" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" data-uia="nmhp-card-animation-asset-image" class="default-ltr-cache-1d3w5wq">
+          <div class="sm:w-[60%] w-[90%] absolute sm:left-[20%] left-[5%] border-[1px] border-[#ccc] py-[1px] bottom-[0px] grid grid-cols-[70%_auto] bg-[black] rounded-[10px] items-center">
+            <div class="grid grid-cols-[20%_auto] text-[white] p-[10px] gap-[15px] items-center"> <!--Grid 2-->
+              <img class="mt-[5px] md-[3px] ml-[5px]" data-uia="nmhp-card-animation-asset-animation" alt="" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png" class="default-ltr-cache-1t1z3a4">
+              
+              <div class="items-center text-[14px]">
+                <h3 class="font-[bold]">Stranger Things</h3>
+                <p class="text-[#3737ff]">Downloading...</p>
+              
+              </div>
+            </div>
+            <div class="max-w-[60px] max-h-[60px]">
+              <img src="./images/download-icon.gif" alt="">
+            </div>
+          </div>
+        </figure>
+
+        <div class="sm:order-[2] order-[1]">
+          <h2 class="sm:text-[50px] text-[40px] font-bold text-[white] sm:leading-[55px] leading-[50px]">Download your shows to watch offline</h2>
+          <p class="text-white sm:text-[25px] text-[20px] pt-[10px]">Save your favourites easily and always have something to watch.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!--Watch Everywhere Section-->
+  <section class="w-[100%] bg-[black] border-t-[8px] border-t-[#b8b8b8] sm:py-[50px] py-[50px]">
+    <div class="max-w-[1170px] mx-auto px-[14px] ">
+      <div class="grid sm:grid-cols-2 grid-cols-1 items-center">
+        <div>
+          <h2 class="sm:text-[50px] text-[40px] font-bold text-[white]">Watch everywhere</h2>
+          <p class="text-white sm:text-[25px] text-[20px] pt-[10px]">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+        </div>
+
+        <figure class="relative">  <!--By applying the relative class to the <figure> tag, it sets the positioning context for any absolutely positioned children within it. This means that any elements with position: absolute; inside this <figure> tag will be positioned relative to the <figure> element, rather than the entire document or another positioned ancestor.-->
+          <video class="absolute w-[60%] bottom-[43%] left-[20%] z-[1]">  <!--Absolute (taki zyada akad dikhake alag na rahe). The percentage part was beautiful if you remember-->
+            <source src="./images/video-devices-in.m4v">
+          </video>
+          <img class="relative z-[2]" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-in.png" data-uia="nmhp-card-animation-asset-image" class="default-ltr-cache-1d3w5wq">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!--Create profiles for kids-->
+  <section class="w-[100%] bg-[black] border-t-[8px] border-t-[#b8b8b8] sm:py-[50px] py-[50px]">
+    <div class="max-w-[1170px] mx-auto px-[14px] ">
+      <div class="grid sm:grid-cols-2 grid-cols-1 items-center"> <!--Biggest grid 1-->
+        
+        <figure class="relative sm:order-[1] order-[2]">  <!--By applying the relative class to the <figure> tag, it sets the positioning context for any absolutely positioned children within it. This means that any elements with position: absolute; inside this <figure> tag will be positioned relative to the <figure> element, rather than the entire document or another positioned ancestor.-->
+          <img alt="" src="https://occ-0-6246-2164.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABVr8nYuAg0xDpXDv0VI9HUoH7r2aGp4TKRCsKNQrMwxzTtr-NlwOHeS8bCI2oeZddmu3nMYr3j9MjYhHyjBASb1FaOGYZNYvPBCL.png?r=54d" data-uia="nmhp-card-animation-asset-image" class="default-ltr-cache-1d3w5wq">
+        </figure>
+
+        <div class="sm:order-[2] order-[1]">
+          <h2 class="sm:text-[50px] text-[40px] font-bold text-[white] sm:leading-[55px] leading-[50px]">Create profiles for kids</h2>
+          <p class="text-white sm:text-[25px] text-[20px] pt-[10px]">Send children on adventures with their favourite characters in a space made just for them—free with your membership.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--FAQ Section-->
+  <section class="w-[100%] bg-[black] border-t-[8px] border-t-[#b8b8b8] sm:py-[50px] py-[50px]">
+    <div class="max-w-[1170px] mx-auto px-[14px] ">
+      <h2 class="sm:text-[50px] text-[40px] font-bold text-[white] text-center">Frequently Asked Questions</h2>
+
+      <div class="py-[30px]">
+        
+        <div class="bg-[#2d2d2d] mb-[8px]">
+          <div class="p-[20px] text-white text-[25px] relative border-b-[2px] border-[black] hover:bg-[rgba(78,78,78)] cursor-pointer ... duration-300 faqQuestion">
+            <h3>What is Netflix?</h3>
+            <span class="absolute right-[20px] top-[15px]">+</span>
+          </div>
+          <div class="text-white text-[25px] scale-y-0 h-[0px] origin-top duration-300">
+            <p class="pb-[15px]">Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more on thousands of internet-connected devices.</p>
+            <p>You can watch as much as you want, whenever you want, without a single ad for a low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</p>
+          </div>
+        </div>
+
+        <div class="bg-[#2d2d2d] mb-[8px]">
+          <div class="p-[20px] text-white text-[25px] relative border-b-[2px] border-[black] hover:bg-[rgba(78,78,78)] cursor-pointer ... duration-300 faqQuestion">
+            <h3>How much does Netflix cost?</h3>
+            <span class="absolute right-[20px] top-[15px]">+</span>
+          </div>
+          <div class="text-white text-[25px] scale-y-0 h-[0px] origin-top duration-300">
+            <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹149 to ₹649 a month. No extra costs, no contracts.</p>
+          </div>
+        </div>
+
+        <div class="bg-[#2d2d2d] mb-[8px]">
+          <div class="p-[20px] text-white text-[25px] relative border-b-[2px] border-[black] hover:bg-[rgba(78,78,78)] cursor-pointer ... duration-300 faqQuestion">
+            <h3>Where can I watch?</h3>
+            <span class="absolute right-[20px] top-[15px]">+</span>
+          </div>
+          <div class="text-white text-[25px] scale-y-0 h-[0px] origin-top duration-300">
+            <p class="pb-[15px]">Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.</p>
+            <p>You can also download your favourite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</p>
+          </div>
+        </div>
+
+        <div class="bg-[#2d2d2d] mb-[8px]">
+          <div class="p-[20px] text-white text-[25px] relative border-b-[2px] border-[black] hover:bg-[rgba(78,78,78)] cursor-pointer ... duration-300 faqQuestion">
+            <h3>How do I cancel?</h3>
+            <span class="absolute right-[20px] top-[15px]">+</span>
+          </div>
+          <div class="text-white text-[25px] scale-y-0 h-[0px] origin-top duration-300">
+            <p>Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+          </div>
+        </div>
+
+        <div class="bg-[#2d2d2d] mb-[8px]">
+          <div class="p-[20px] text-white text-[25px] relative border-b-[2px] border-[black] hover:bg-[rgba(78,78,78)] cursor-pointer ... duration-300 faqQuestion">
+            <h3>What can I watch on Netflix?</h3>
+            <span class="absolute right-[20px] top-[15px]">+</span>
+          </div>
+          <div class="text-white text-[25px] scale-y-0 h-[0px] origin-top duration-300">
+            <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+          </div>
+        </div>
+
+        <div class="bg-[#2d2d2d] mb-[8px]">
+          <div class="p-[20px] text-white text-[25px] relative border-b-[2px] border-[black] hover:bg-[rgba(78,78,78)] cursor-pointer ... duration-300 faqQuestion">
+            <h3>Is Netflix good for kids?</h3>
+            <span class="absolute right-[20px] top-[15px]">+</span>
+          </div>
+          <div class="text-white text-[25px] scale-y-0 h-[0px] origin-top duration-300">
+            <p class="pb-[15px]">The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space.</p>
+            <p>Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don't want kids to see.</p>
+          </div>
+        </div>
+
+
+      </div>
+
+      <h4 class="text-[22px] py-[10px] text-white text-center">
+        Ready to watch? Enter your email to create or restart your membership.
+      </h4>
+
+      <div class="max-w-[700px] mx-auto pt-[10px] sm:px-[10px] px-[40px] ">
+        <form action="" class="grid sm:grid-cols-[70%_auto] gap-[10px] grid-cols-1 text-center "> <!--Meaning if screen is smaller than 640ox, then there is going to be only 1 column-->
+          <input type="text" class= "border-[white] text-white border-[1px] h-[50px] bg-[transparent] pl-[20px] rounded-[5px] smol" placeholder="Email Address">
+          <button class="text-[white] bg-red-600 font-bold text-[22px] rounded-[5px] sm:max-w-[300px] max-w-[200px] py-[5px] mx-auto px-[20px] hover:bg-[rgba(193,17,25)] duration-300 flex justify-between items-center">
+            <p>Get Started</p>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="24" height="24" viewBox="0 0 24 24" role="img" data-icon="ChevronRightStandard" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z" fill="currentColor"></path></svg>
+            </div>
+          </button>
+        </form>
+      </div>
+      
+    </div>
+  </section>
+
+  <!--Footer bhaiji-->
+  <section class="w-[100%] bg-[black] border-t-[8px] border-t-[#b8b8b8] sm:py-[50px] py-[50px]">
+    <div class="max-w-[1170px] mx-auto px-[14px]">
+      <h3 class="text-[#B3B3B3]">Questions? Call <a class="underline" href="tel:000-800-919-1694">000-800-919-1694</a></h3>
+
+      <div class="grid sm:grid-cols-4 grid-cols-1 underline mb-[30px] text-[#B3B3B3]">
+        <div>
+          <h3 class="pt-[20px]">FAQ</h3>
+          <h3 class="pt-[15px]">Investor Relations</h3>
+          <h3 class="pt-[15px]">Privacy</h3>
+          <h3 class="pt-[15px]">Speed Test</h3>
+        </div>
+        <div>
+          <h3 class="pt-[15px]">Help Center</h3>
+          <h3 class="pt-[15px]">Jobs</h3>
+          <h3 class="pt-[15px]">Cookie Preference</h3>
+          <h3 class="pt-[15px]">Legal Notices</h3>
+        </div>
+        <div>
+          <h3 class="pt-[15px]">Account</h3>
+          <h3 class="pt-[15px]">Ways to Watch</h3>
+          <h3 class="pt-[15px]">Corporate Information</h3>
+          <h3 class="pt-[15px]">Only on Netflix</h3>
+        </div>
+        <div>
+          <h3 class="pt-[15px]">Media Center</h3>
+          <h3 class="pt-[15px]">Terms of Use</h3>
+          <h3 class="pt-[15px]">Contact Us</h3>
+        </div>
+
+      </div>
+
+      <div class="relative text-[white]">
+          <svg class="absolute top-[10px] left-[9px]" xmlns="http://www.w3.org/2000/svg" fill="none" width="16" height="16" viewBox="0 0 16 16" role="img" data-icon="LanguagesSmall" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.7668 5.33333L10.5038 5.99715L9.33974 8.9355L8.76866 10.377L7.33333 14H9.10751L9.83505 12.0326H13.4217L14.162 14H16L12.5665 5.33333H10.8278H10.7668ZM10.6186 9.93479L10.3839 10.5632H11.1036H12.8856L11.6348 7.2136L10.6186 9.93479ZM9.52722 4.84224C9.55393 4.77481 9.58574 4.71045 9.62211 4.64954H6.41909V2H4.926V4.64954H0.540802V5.99715H4.31466C3.35062 7.79015 1.75173 9.51463 0 10.4283C0.329184 10.7138 0.811203 11.2391 1.04633 11.5931C2.55118 10.6795 3.90318 9.22912 4.926 7.57316V12.6667H6.41909V7.51606C6.81951 8.15256 7.26748 8.76169 7.7521 9.32292L8.31996 7.88955C7.80191 7.29052 7.34631 6.64699 6.9834 5.99715H9.06968L9.52722 4.84224Z" fill="currentColor"></path></svg> 
+          <select name="" id="" class="bg-black border-[1px] border-[#5E5E5E] sm:p-[5px_25px] p-[5px_20px] rounded-[5px] pr-[40px]">  <!--Meaning for top-buttom, padding is 5px, and for left-right, padding is 25px, and then for pixels smaller than 640 px, let it be 5px_20px-->
+            <option value="">English</option>
+            <option value="">Hindi</option>
+          </select> 
+      </div>
+
+      <h4 class="text-[#B3B3B3] pt-[20px]">Netflix India</h4>
+
+      </div>
+  </section>
+
+</body>
+
+<script>
+  let allQuestions = document.querySelectorAll(".faqQuestion");
+  allQuestions.forEach((v, index) => {
+    v.addEventListener("click", () => {
+        v.nextElementSibling.classList.toggle("h-[auto]");
+        v.nextElementSibling.classList.toggle("scale-y-100");
+        v.nextElementSibling.classList.toggle("p-[20px]"); // Toggle padding when showing content
+        v.children[1].classList.toggle("rotate-45");
+
+        allQuestions.forEach((el, i)=>{
+          if(i != index){
+          el.nextElementSibling.classList.remove("h-[auto]", "scale-y-100", 'p-[20px]');
+          el.children[1]. classList.remove("rotate-45");
+          }
+        }
+        );
+        }
+      )
+      }
+      );
+
+      const input = document.querySelector(".smol");
+
+      // Add event listeners to handle focus and blur events
+      input.addEventListener("click", () => {
+        input.classList.add("placeholder-focused");
+      });
+
+  </script>
+
+</html>
