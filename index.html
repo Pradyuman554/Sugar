@@ -3,7 +3,7 @@
 
 <head>
   <meta charset = 'utf-8'>
-  <title>Netflix Clone</title>
+  <title>Sugar</title>
   <link rel="stylesheet" href="./styles/man.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -52,7 +52,9 @@
         <div class="grid sm:grid-col-2 grid-cols-[30%_auto] px-[10px] items-center">   <!--Meaning the grid has 2 columns FOR A MINIMUM SIZE OF 640px; AND make the First column=30% (meaning figure) of the grid length, and rest 70% is of div column-->
           <figure>
             <!-- logo -->
-            <img src="./images/Netflix.png" class="w-[148px]" alt="">
+              <div class="text-[#E40812] text-[80px] font-bold fontFamily">
+                <h1>Sugar</h1>
+              </div>
           </figure>
           <!-- The other stuff -->
           <div class="flex justify-end gap-[20px] text-white">
@@ -112,7 +114,7 @@
           <video class="absolute w-[80%] bottom-[20%] left-[10%] z-[1]">  <!--Absolute (taki zyada akad dikhake alag na rahe). The percentage part was beautiful if you remember-->
             <source src="./images/video-tv-in-0819.m4v">
           </video>
-          <img class="relative z-[2]" alt="" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" data-uia="nmhp-card-animation-asset-image" class="default-ltr-cache-1d3w5wq">
+          <img class="relative z-[2]" alt="" src="./images/tv.png" data-uia="nmhp-card-animation-asset-image" class="default-ltr-cache-1d3w5wq">
         </figure>
       </div>
     </div>
@@ -124,10 +126,10 @@
       <div class="grid sm:grid-cols-2 grid-cols-1 items-center"> <!--Biggest grid 1-->
         
         <figure class="relative sm:order-[1] order-[2]">  <!--By applying the relative class to the <figure> tag, it sets the positioning context for any absolutely positioned children within it. This means that any elements with position: absolute; inside this <figure> tag will be positioned relative to the <figure> element, rather than the entire document or another positioned ancestor.-->
-          <img alt="" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" data-uia="nmhp-card-animation-asset-image" class="default-ltr-cache-1d3w5wq">
+          <img alt="" src="./images/mobile-0819.jpg" data-uia="nmhp-card-animation-asset-image" class="default-ltr-cache-1d3w5wq">
           <div class="sm:w-[60%] w-[90%] absolute sm:left-[20%] left-[5%] border-[1px] border-[#ccc] py-[1px] bottom-[0px] grid grid-cols-[70%_auto] bg-[black] rounded-[10px] items-center">
             <div class="grid grid-cols-[20%_auto] text-[white] p-[10px] gap-[15px] items-center"> <!--Grid 2-->
-              <img class="mt-[5px] md-[3px] ml-[5px]" data-uia="nmhp-card-animation-asset-animation" alt="" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png" class="default-ltr-cache-1t1z3a4">
+              <img class="mt-[5px] md-[3px] ml-[5px]" data-uia="nmhp-card-animation-asset-animation" alt="" src="./images/boxshot.png" class="default-ltr-cache-1t1z3a4">
               
               <div class="items-center text-[14px]">
                 <h3 class="font-[bold]">Stranger Things</h3>
@@ -163,7 +165,7 @@
           <video class="absolute w-[60%] bottom-[43%] left-[20%] z-[1]">  <!--Absolute (taki zyada akad dikhake alag na rahe). The percentage part was beautiful if you remember-->
             <source src="./images/video-devices-in.m4v">
           </video>
-          <img class="relative z-[2]" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-in.png" data-uia="nmhp-card-animation-asset-image" class="default-ltr-cache-1d3w5wq">
+          <img class="relative z-[2]" src="./images/device-pile-in.png" data-uia="nmhp-card-animation-asset-image" class="default-ltr-cache-1d3w5wq">
         </figure>
       </div>
     </div>
@@ -175,7 +177,7 @@
       <div class="grid sm:grid-cols-2 grid-cols-1 items-center"> <!--Biggest grid 1-->
         
         <figure class="relative sm:order-[1] order-[2]">  <!--By applying the relative class to the <figure> tag, it sets the positioning context for any absolutely positioned children within it. This means that any elements with position: absolute; inside this <figure> tag will be positioned relative to the <figure> element, rather than the entire document or another positioned ancestor.-->
-          <img alt="" src="https://occ-0-6246-2164.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABVr8nYuAg0xDpXDv0VI9HUoH7r2aGp4TKRCsKNQrMwxzTtr-NlwOHeS8bCI2oeZddmu3nMYr3j9MjYhHyjBASb1FaOGYZNYvPBCL.png?r=54d" data-uia="nmhp-card-animation-asset-image" class="default-ltr-cache-1d3w5wq">
+          <img alt="" src="./images/Children.png" data-uia="nmhp-card-animation-asset-image" class="default-ltr-cache-1d3w5wq">
         </figure>
 
         <div class="sm:order-[2] order-[1]">
@@ -195,22 +197,22 @@
         
         <div class="bg-[#2d2d2d] mb-[8px]">
           <div class="p-[20px] text-white text-[25px] relative border-b-[2px] border-[black] hover:bg-[rgba(78,78,78)] cursor-pointer ... duration-300 faqQuestion">
-            <h3>What is Netflix?</h3>
+            <h3>What is Sygar?</h3>
             <span class="absolute right-[20px] top-[15px]">+</span>
           </div>
           <div class="text-white text-[25px] scale-y-0 h-[0px] origin-top duration-300">
-            <p class="pb-[15px]">Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more on thousands of internet-connected devices.</p>
-            <p>You can watch as much as you want, whenever you want, without a single ad for a low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</p>
+            <p class="pb-[15px]">Sugar is a streaming service that provides an extensive selection of award-winning TV shows, movies, anime, documentaries, and more, accessible on thousands of internet-connected devices.</p>
+            <p>Enjoy unlimited ad-free viewing whenever you want for a low monthly price. There's always something new to discover, with new TV shows and movies added every week!</p>
           </div>
         </div>
 
         <div class="bg-[#2d2d2d] mb-[8px]">
           <div class="p-[20px] text-white text-[25px] relative border-b-[2px] border-[black] hover:bg-[rgba(78,78,78)] cursor-pointer ... duration-300 faqQuestion">
-            <h3>How much does Netflix cost?</h3>
+            <h3>How much does Sugar cost?</h3>
             <span class="absolute right-[20px] top-[15px]">+</span>
           </div>
           <div class="text-white text-[25px] scale-y-0 h-[0px] origin-top duration-300">
-            <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹149 to ₹649 a month. No extra costs, no contracts.</p>
+            <p>Watch Sugar on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹149 to ₹649 a month. No extra costs, no contracts.</p>
           </div>
         </div>
 
@@ -220,8 +222,8 @@
             <span class="absolute right-[20px] top-[15px]">+</span>
           </div>
           <div class="text-white text-[25px] scale-y-0 h-[0px] origin-top duration-300">
-            <p class="pb-[15px]">Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.</p>
-            <p>You can also download your favourite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</p>
+            <p class="pb-[15px]">Watch anywhere, anytime. Sign in with your Sugar account to watch instantly on the web at Sugar.com from your personal computer or on any internet-connected device that offers the Sugar app, including smart TVs, smartphones, tablets, streaming media players and game consoles.</p>
+            <p>You can also download your favourite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take Sugar with you anywhere.</p>
           </div>
         </div>
 
@@ -231,27 +233,27 @@
             <span class="absolute right-[20px] top-[15px]">+</span>
           </div>
           <div class="text-white text-[25px] scale-y-0 h-[0px] origin-top duration-300">
-            <p>Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+            <p>Sugar is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
           </div>
         </div>
 
         <div class="bg-[#2d2d2d] mb-[8px]">
           <div class="p-[20px] text-white text-[25px] relative border-b-[2px] border-[black] hover:bg-[rgba(78,78,78)] cursor-pointer ... duration-300 faqQuestion">
-            <h3>What can I watch on Netflix?</h3>
+            <h3>What can I watch on Sugar?</h3>
             <span class="absolute right-[20px] top-[15px]">+</span>
           </div>
           <div class="text-white text-[25px] scale-y-0 h-[0px] origin-top duration-300">
-            <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+            <p>Sugar has an extensive library of feature films, documentaries, TV shows, anime, award-winning Sugar originals, and more. Watch as much as you want, anytime you want.</p>
           </div>
         </div>
 
         <div class="bg-[#2d2d2d] mb-[8px]">
           <div class="p-[20px] text-white text-[25px] relative border-b-[2px] border-[black] hover:bg-[rgba(78,78,78)] cursor-pointer ... duration-300 faqQuestion">
-            <h3>Is Netflix good for kids?</h3>
+            <h3>Is Sugar good for kids?</h3>
             <span class="absolute right-[20px] top-[15px]">+</span>
           </div>
           <div class="text-white text-[25px] scale-y-0 h-[0px] origin-top duration-300">
-            <p class="pb-[15px]">The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space.</p>
+            <p class="pb-[15px]">The Sugar Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space.</p>
             <p>Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don't want kids to see.</p>
           </div>
         </div>
@@ -300,7 +302,7 @@
           <h3 class="pt-[15px]">Account</h3>
           <h3 class="pt-[15px]">Ways to Watch</h3>
           <h3 class="pt-[15px]">Corporate Information</h3>
-          <h3 class="pt-[15px]">Only on Netflix</h3>
+          <h3 class="pt-[15px]">Only on Sugar</h3>
         </div>
         <div>
           <h3 class="pt-[15px]">Media Center</h3>
@@ -318,7 +320,7 @@
           </select> 
       </div>
 
-      <h4 class="text-[#B3B3B3] pt-[20px]">Netflix India</h4>
+      <h4 class="text-[#B3B3B3] pt-[20px]">Sugar India</h4>
 
       </div>
   </section>
